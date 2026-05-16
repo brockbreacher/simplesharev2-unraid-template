@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SimpleShare</Name>
+  <Repository>php:7.4-apache</Repository>
+  <Registry>https://hub.docker.com/_/php</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Chaottiic/SimpleShare</Support>
+  <Project/>
+  <Overview>SimpleShare - A file sharing script compatible with ShareX</Overview>
+  <Category>Tools:Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>0</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="80" Default="8080" Mode="tcp" Description="Port to access SimpleShare web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="AppData" Target="/var/www/html" Default="/mnt/user/appdata/simpleshare/" Mode="rw" Description="Location for SimpleShare PHP files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/simpleshare/</Config>
+  <Config Name="Uploaded Files" Target="/var/www/html/files" Default="/mnt/disk1/nas/Apps/simpleshare-imglutisnet/" Mode="rw" Description="Directory where uploaded files are stored" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk1/nas/Apps/simpleshare-imglutisnet/</Config>
+  <Config Name="PHP Memory Limit" Target="PHP_MEMORY_LIMIT" Default="256M" Mode="" Description="Maximum memory a script can consume" Type="Variable" Display="advanced" Required="false" Mask="false">256M</Config>
+  <Config Name="PHP Upload Max Size" Target="PHP_UPLOAD_MAX_FILESIZE" Default="100M" Mode="" Description="Maximum size for uploaded files" Type="Variable" Display="advanced" Required="false" Mask="false">100M</Config>
+  <Config Name="PHP Post Max Size" Target="PHP_POST_MAX_SIZE" Default="100M" Mode="" Description="Maximum size for POST data" Type="Variable" Display="advanced" Required="false" Mask="false">100M</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Chicago" Mode="" Description="Container timezone" Type="Variable" Display="advanced" Required="false" Mask="false">America/Chicago</Config>
+  <Config Name="Error Logging" Target="PHP_ERROR_REPORTING" Default="E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT" Mode="" Description="PHP error reporting level" Type="Variable" Display="advanced" Required="false" Mask="false">E_ALL &amp; ~E_DEPRECATED &amp; ~E_STRICT</Config>
+  <Config Name="Display Errors" Target="PHP_DISPLAY_ERRORS" Default="0" Mode="" Description="Set to 1 for debugging, 0 for production" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+</Container>
